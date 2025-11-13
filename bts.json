@@ -1,0 +1,13 @@
+{
+  "timeline": [
+    {"title":"Debut Era","text":"From a small company to world legends.","img":"assets/bts/debut.jpg"},
+    {"title":"Hardship Era","text":"Sleepless nights & unshakable dreams.","img":"assets/bts/practice.jpg"},
+    {"title":"Global Kings","text":"Purple oceans across stadiums worldwide.","img":"assets/bts/stadium.jpg"}
+  ],
+  "posters":[
+    "assets/bts/p1.jpg",
+    "assets/bts/p2.jpg",
+    "assets/bts/p3.jpg",
+    "assets/bts/p4.jpg"
+  ]
+}

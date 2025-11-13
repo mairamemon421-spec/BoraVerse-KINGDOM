@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BoraVerse — Fan Zone</title>
+  <link rel="stylesheet" href="fanzone.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">💜BORAVERSE</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="Artist.html">Artists</a></li>
+      <li><a href="news.html">News</a></li>
+      <li><a href="Gallery.html">Gallery</a></li>
+      <li><a class="active" href="fanzone.html">Fan Zone</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>💜 BoraVerse Fan Zone 💜</h1>
+    <p>Where K-pop fans shine brighter than the stars </p>
+  </header>
+
+  <main>
+    <!-- Fan Art Section -->
+    <section id="fanArt">
+      <h2>Fan Creations</h2>
+      <div class="art-gallery" id="artGallery"></div>
+    </section>
+
+    <!-- Message Wall Section -->
+    <section id="messageWall">
+      <h2>💌 Message to Your Idol</h2>
+      <form id="messageForm">
+        <input type="text" id="fanName" placeholder="Your Name" required>
+        <select id="idolSelect" required>
+          <option value="">Select Idol/Group</option>
+          <option>BTS</option>
+          <option>BLACKPINK</option>
+          <option>EXO</option>
+          <option>NewJeans</option>
+          <option>TWICE</option>
+          <option>Stray Kids</option>
+          <option>Seventeen</option>
+        </select>
+        <textarea id="fanMessage" placeholder="Write your message..." required></textarea>
+        <button type="submit">Post Message 💫</button>
+      </form>
+      <div id="messagesContainer"></div>
+    </section>
+
+    <!-- Fan Poll / Quiz -->
+    <section id="fanPoll">
+      <h2> Fan Fun Zone</h2>
+      <p>Which BTS era is your favorite?</p>
+      <div class="poll-options">
+        <button class="poll-btn" data-option="Dynamite">Dynamite</button>
+        <button class="poll-btn" data-option="Butter">Butter</button>
+        <button class="poll-btn" data-option="DNA">DNA</button>
+      </div>
+      <p id="pollResult"></p>
+    </section>
+
+    <!-- Mini K-pop Trivia Game -->
+    <!-- Mini K-pop Trivia Game -->
+<section id="triviaGame">
+  <h2>🎮 K-pop Trivia Game</h2>
+
+  <div id="triviaContainer">
+    <p id="questionText">Click “Start Quiz 🎤” to begin!</p>
+
+    <!-- Progress bar -->
+    <div id="progressBar">
+      <div id="progressBarInner"></div>
+    </div>
+
+    <!-- Options will appear here -->
+    <div id="optionsContainer"></div>
+
+    <!-- Buttons -->
+    <div class="trivia-buttons">
+      <button id="startTrivia">Start Quiz 🎤</button>
+      <button id="nextQuestion">Next ➡️</button>
+    </div>
+
+    <p id="scoreDisplay">Score: 0</p>
+  </div>
+</section>
+
+  </main>
+
+  <footer>
+    <p>✨ BoraVerse — Connecting Fans Across the Galaxy ✨</p>
+  </footer>
+
+  <script src="fanzone.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Boraverse — K-POP Chatbot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+    <!-- Chatbot Toggle Button -->
+    <div class="chatbot-toggle" id="chatbotToggle" aria-label="Open Boraverse chat">
+        <i class="fas fa-comments" aria-hidden="true"></i>
+    </div>
+
+    <!-- Chatbot Container -->
+    <div class="chatbot-container" id="chatbotContainer" role="dialog" aria-modal="true" aria-hidden="true">
+        <!-- Header -->
+        <div class="chatbot-header">
+            <div class="chatbot-title">
+                <h3>Boraverse Assistant</h3>
+                <p>Your K‑POP knowledge hub — ask any group or idol.</p>
+            </div>
+            <button class="close-btn" id="closeBtn" aria-label="Close chat">&times;</button>
+        </div>
+
+        <!-- Chat Messages Area -->
+        <div class="chatbot-messages" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-content">
+                    <p>Welcome to Boraverse! Ask about any K‑POP group, idol, album, tour or news.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="chatbot-input">
+            <input 
+                type="text" 
+                id="userInput" 
+                placeholder="Type e.g. 'Tell me about Twice' or 'Where to find EXO discography'..." 
+                autocomplete="off"
+                aria-label="Chat input"
+            >
+            <button id="sendBtn" aria-label="Send"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script src="chatbot.js"></script>
+</body>
+</html>

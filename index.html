@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>K-POP World</title>
+  <link rel="stylesheet" href="Style.css">
+  <link rel="stylesheet" href="chatbot.css">
+  
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header>
+    <nav class="navbar">
+      <h1 class="logo">🎵 BORAVERSE</h1>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Artist.html">Artists</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="fanzone.html">Fan Zone</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <input type="text" id="search" placeholder="Search...">
+      <button id="modeToggle">🌙</button>
+      <button class="menu-toggle" id="menuToggle">☰</button>
+    </nav>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero">
+    <div class="hero-content">
+      <h2>🔥 BLACKPINK – Pink Venom</h2>
+      <p>Watch the latest comeback now!</p>
+      <br>
+      <button class="btn" id="watchNow">Watch Now</button>
+    </div>
+  </section>
+
+ <!-- Trending Section -->
+<section class="trending">
+  <h2>🔥 Trending Now</h2>
+  <br><br>
+  <div class="trending-cards">
+    <div class="card">
+      <img src="BTS.jpg" alt="BTS">
+      <br>
+      <h3>BTS – Dynamite</h3>
+      <button class="watch-btn" data-link="https://www.youtube.com/watch?v=BflFNMl_UWY">Watch Now</button>
+    </div>
+
+    <div class="card">
+      <img src="EXO CREAM SODA!.jpeg" alt="EXO">
+      <h3>EXO – Cream Soda</h3>
+      <button class="watch-btn" data-link="https://www.youtube.com/watch?v=i5nUufn_FmE">Watch Now</button>
+    </div>
+
+    <div class="card">
+      <img src="NEWJEANS SUPER SHY Y2K GRAPHIC.jpeg" alt="NewJeans">
+      <h3>NewJeans – Super Shy</h3>
+      <button class="watch-btn" data-link="https://www.youtube.com/watch?v=ArmDp-zijuc">Watch Now</button>
+    </div>
+
+    <div class="card">
+      <img src="jpeg(1)" alt="Stray Kids">
+      <h3>Stray Kids – Chk Chk Boom</h3>
+      <button class="watch-btn" data-link="https://www.youtube.com/watch?v=T17AR8cVmto">Watch Now</button>
+    </div>
+  </div>
+</section>
+
+  <!-- Featured Artists -->
+  <section class="artists">
+    <h2>🌟 Featured Artists</h2>
+    <div class="artist-slider">
+      <div class="artist">BTS</div>
+      <div class="artist">BLACKPINK</div>
+      <div class="artist">NewJeans</div>
+      <div class="artist">EXO</div>
+      <div class="artist">Straykids</div>
+       <div class="artist">Twice</div>
+      <div class="artist">Seventeen</div>
+      <!-- 🌟 Featured Artists Section -->
+<section class="artists" id="artists">
+  
+  <div class="artist-slider">
+    <div class="artist-card" data-artist="BTS">
+      <img src="Hot BTS members.jpeg" alt="BTS">
+      <div class="artist-info">
+        <h3>BTS</h3>
+        <p>7-member global sensation redefining K-POP.</p>
+        <button class="learn-more" data-artist="BTS">Learn More</button>
+      </div>
+    </div>
+
+    <div class="artist-card" data-artist="BLACKPINK">
+      <img src="Blackpink jump.jpeg" alt="BLACKPINK">
+      <div class="artist-info">
+        <h3>BLACKPINK</h3>
+        <p>Queens of charisma and the global girl group phenomenon!</p>
+        <button class="learn-more" data-artist="BLACKPINK">Learn More</button>
+      </div>
+    </div>
+    <div class="artist-card" data-artist="SEVENTEEN">
+  <img src="seventeen.jpeg" alt="SEVENTEEN">
+  <div class="artist-info">
+    <h3>Seventeen</h3>
+    <p>Thirteen members,one team,synchronized moves and self-produced hits!</p>
+    <button class="learn-more" data-artist="SEVENTEEN">Learn More</button>
+  </div>
+    </div>
+
+    <div class="artist-card" data-artist="EXO">
+      <img src="EXO.jpeg" alt="EXO">
+      <div class="artist-info">
+        <h3>EXO</h3>
+        <p>Powerful vocals and legendary performances.</p>
+        <button class="learn-more" data-artist="EXO">Learn More</button>
+      </div>
+    </div>
+
+    <div class="artist-card" data-artist="NewJeans">
+      <img src="NEWJEANS .jpeg" alt="NewJeans">
+      <div class="artist-info">
+        <h3>NewJeans</h3>
+        <p>Fresh beats and Y2K vibes for Gen Z fans!</p>
+        <button class="learn-more" data-artist="NewJeans">Learn More</button>
+      </div>
+    </div>
+    <div class="artist-card" data-artist="StrayKids">
+  <img src="Stray kids - skz.jpeg" alt="Stray Kids">
+  <div class="artist-info">
+    <h3>Stray Kids</h3>
+    <p>Powerful performances and bold, self-produced music!</p>
+    <button class="learn-more" data-artist="StrayKids">Learn More</button>
+  </div>
+    </div>
+  <div class="artist-card" data-artist="Twice">
+  <img src="Twice.jpeg" alt="Twice">
+  <div class="artist-info">
+    <h3>Twice</h3>
+    <p style="font-size: smalls;">"Nation's girl Group",Known for energetic,catchy tunes and vibrant performances!</p>
+
+      
+    <button class="learn-more" data-artist="Twice">Learn More</button>
+  </div>
+</div>
+
+</div>
+
+  </div>
+
+  <!-- Popup Modal -->
+  <div class="artist-modal" id="artistModal">
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <h2 id="modalName">Artist Name</h2>
+      <p id="modalBio">Artist details will appear here.</p>
+      <audio controls id="modalAudio">
+        <source src="" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
+</section>
+   
+
+  <!-- Fan Interaction -->
+   <section class="fan-zone">
+    <h2>💬 Fan Zone</h2>
+    <p>Vote for your favorite comeback:</p>
+    <button class="vote-btn" data-artist="BTS">BTS</button>
+    <button class="vote-btn" data-artist="BLACKPINK">BLACKPINK</button>
+    <button class="vote-btn" data-artist="EXO">EXO</button>
+    <button class="vote-btn" data-artist="SEVENTEEN">SEVENTEEN</button>
+    <button class="vote-btn" data-artist="STRAYKIDS">STRAYKIDS</button>
+    <button class="vote-btn" data-artist="TWICE">TWICE</button>
+    <button class="vote-btn" data-artist="NEWJEANS">NEWJEANS</button>
+    <div id="voteResult"></div>
+  </section>
+
+  <!-- Music Player -->
+  <div class="music-player">
+    <p id="currentSong">🎶 Now Playing: None</p>
+    <button id="play">Play</button>
+    <button id="pause">Pause</button>
+  </div>
+ 
+
+  <!-- Footer -->
+   <footer>
+  <p>made with 💜 by the BTS ARMY</p>
+  <p>“Music transcends language — it’s the voice of the soul.” 🎶</p>
+  <p>&copy; 2025 K-POP World. All rights reserved.</p>
+</footer>
+
+ <script src="myscript.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Boraverse — K-POP Chatbot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+    <!-- Chatbot Toggle Button -->
+    <div class="chatbot-toggle" id="chatbotToggle" aria-label="Open Boraverse chat">
+        <i class="fas fa-comments" aria-hidden="true"></i>
+    </div>
+
+    <!-- Chatbot Container -->
+    <div class="chatbot-container" id="chatbotContainer" role="dialog" aria-modal="true" aria-hidden="true">
+        <!-- Header -->
+        <div class="chatbot-header">
+            <div class="chatbot-title">
+                <h3>Boraverse Assistant</h3>
+                <p>Your K‑POP knowledge hub — ask any group or idol.</p>
+            </div>
+            <button class="close-btn" id="closeBtn" aria-label="Close chat">&times;</button>
+        </div>
+
+        <!-- Chat Messages Area -->
+        <div class="chatbot-messages" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-content">
+                    <p>Welcome to Boraverse! Ask about any K‑POP group, idol, album, tour or news.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="chatbot-input">
+            <input 
+                type="text" 
+                id="userInput" 
+                placeholder="Type e.g. 'Tell me about Twice' or 'Where to find EXO discography'..." 
+                autocomplete="off"
+                aria-label="Chat input"
+            >
+            <button id="sendBtn" aria-label="Send"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script src="chatbot.js"></script>
+    
+</body>
+</html>

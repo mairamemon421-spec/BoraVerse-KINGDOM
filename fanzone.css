@@ -1,0 +1,283 @@
+body {
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #1a0033, #4b0082);
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 1em 2em;
+  box-shadow: 0 0 20px #b366ff;
+  position: relative;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 1.5em;
+  color: #d9b3ff;
+  font-weight: bold;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 1.5em;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: #c299ff;
+  transition: 0.3s;
+  font-weight: 500;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  color: #fff;
+  text-shadow: 0 0 10px #b366ff, 0 0 20px #d580ff;
+}
+
+/* HEADER */
+header {
+  text-align: center;
+  padding: 2em;
+  background: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 0 20px #b366ff;
+}
+
+header h1 {
+  color: #d9b3ff;
+  font-size: 2.5em;
+    margin-bottom: 0.2em;
+  animation: pulse-glow 2s infinite;
+}
+
+header p {
+  color: #c299ff;
+  font-size: 1.1em;
+}
+
+/* SECTIONS */
+section {
+    flex-wrap: wrap;
+  padding: 2em;
+  margin: 1em auto;
+  width: 90%;
+  max-width: 1000px;
+  background: rgba(74, 16, 97, 0.07);
+  border-radius: 15px;
+  box-shadow: 0 0 15px #60086b;
+}
+
+h2 {
+  color: #e0b3ff;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+/* FAN ART */
+.art-gallery {
+  flex-wrap: wrap;
+    display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 15px;
+}
+
+.art-card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  text-align: center;
+  padding: 1em;
+  box-shadow: 0 0 10px #2b094d;
+  transition: 0.3s;
+}
+
+.art-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px #cc99ff;
+}
+
+.art-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* MESSAGE WALL */
+#messageForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+#messageForm input, #messageForm select, #messageForm textarea {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  outline: none;
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  font-size: 1em;
+}
+
+#messageForm button {
+  background: linear-gradient(90deg, #a64dff, #d580ff);
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#messageForm button:hover {
+  background: linear-gradient(90deg, #d580ff, #a64dff);
+  transform: scale(1.05);
+}
+
+#messagesContainer {
+  margin-top: 1.5em;
+}
+
+.message-card {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 10px;
+  box-shadow: 0 0 10px #b366ff;
+}
+
+/* POLL */
+.poll-options {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+}
+
+.poll-btn {
+  background: rgba(255, 255, 255, 0.15);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.poll-btn:hover {
+  background: #b366ff;
+  transform: scale(1.1);
+}
+
+/* TRIVIA GAME */
+#triviaGame {
+  text-align: center;
+}
+
+#triviaContainer {
+  margin-top: 1em;
+}
+
+#progressBarOuter {
+  width: 80%;
+  max-width: 500px;
+  height: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  margin: 10px auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+#progressBarInner {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #a64dff, #d580ff);
+  transition: width 0.3s ease;
+}
+
+#optionsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  margin-top: 1em;
+}
+
+.option-btn {
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  border-radius: 10px;
+  padding: 10px 20px;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+  width: 60%;
+  max-width: 400px;
+}
+
+.option-btn:hover {
+  background: #b366ff;
+  transform: scale(1.05);
+}
+
+#nextQuestion, #startTrivia {
+  background: linear-gradient(90deg, #a64dff, #d580ff);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 1em;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#nextQuestion:hover, #startTrivia:hover {
+  transform: scale(1.05);
+}
+
+#scoreDisplay {
+  margin-top: 1em;
+  font-size: 1.1em;
+  color: #e0b3ff;
+}
+/* Trivia progress bar */
+#progressBar {
+  width: 80%;
+  height: 10px;
+  background: rgba(255,255,255,0.15);
+  border-radius: 10px;
+  margin: 1em auto;
+  overflow: hidden;
+}
+#progressBarInner {
+  width: 0%;
+  height: 100%;
+  background: linear-gradient(90deg, #a64dff, #d580ff);
+  transition: width 0.4s ease;
+}
+.trivia-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-top: 1em;
+}
+
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 1em;
+  color: #c299ff;
+  font-size: 0.9em;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>K-POP World — Artists</title>
+  <link rel="stylesheet" href="artist-style.css">
+</head>
+<body>
+  <!-- NAV / HEADER -->
+  <header class="topbar">
+    <div class="brand">🎵 BORAVERSE</div>
+ <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="Artist.html">Artists</a></li>
+        <li><a href="news.html">News</a></li>
+        <li><a href="Gallery.html">Gallery</a></li>
+        <li><a href="fanzone.html">Fan Zone</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    <div class="controls">
+      <input id="searchInput" type="search" placeholder="Search group or member..." />
+      <button id="biasBtn" class="btn small">Random Bias</button>
+      <label class="theme-switch">
+        <input id="themeSwitch" type="checkbox">
+        <span class="slider"></span>
+      </label>
+    </div>
+     
+  </header>
+
+  <!-- Animated stage lines -->
+  <div class="stage-anim">
+    <div class="line l1"></div>
+    <div class="line l2"></div>
+    <div class="line l3"></div>
+  </div>
+
+  <main class="wrap">
+    <!-- Intro -->
+    <section class="intro">
+      <h1>Featured Artists</h1>
+      <p class="subtitle">Explore our top 7 groups — members, songs, videos,
+         fanfacts & more. </p>
+    </section>
+
+    <!-- GRID OF GROUP CARDS -->
+    <section class="grid" id="groupGrid" aria-label="Artist Groups">
+      <!-- Each group card inserted statically for clarity -->
+      <article class="group-card" data-group="BTS">
+        <img src="BTS GROUP PHOTO - Imgur.jpg" alt="BTS" />
+        <h3>BTS</h3>
+        <p>7-member global sensation redefining K-POP.</p>
+        <div class="card-actions">
+          <button class="open-group btn" data-target="BTS">Explore</button>
+          <button class="preview-btn tiny" data-audio="RUN BTS.mp3">▶ Preview</button>
+        </div>
+      </article>
+
+      <article class="group-card" data-group="BLACKPINK">
+        <img src="Blackpink Photo - Imgur.jpg" alt="BLACKPINK" />
+        <h3>BLACKPINK</h3>
+        <p>Queens of charisma and global phenomenon.</p>
+        <div class="card-actions">
+          <button class="open-group btn" data-target="BLACKPINK">Explore</button>
+          <button class="preview-btn tiny" data-audio="Blackpink in your area.mp3">▶ Preview</button>
+        </div>
+      </article>
+
+      <article class="group-card" data-group="EXO">
+        <img src="EXO PHOTO.jpeg" alt="EXO" />
+        <h3>EXO</h3>
+        <p>Powerful vocals and legendary performances.</p>
+        <div class="card-actions">
+          <button class="open-group btn" data-target="EXO">Explore</button>
+          <button class="preview-btn tiny" data-audio="EXO-love shot.mp3">▶ Preview</button>
+        </div>
+      </article>
+
+      <article class="group-card" data-group="SEVENTEEN">
+        <img src="SEVENTEEN family pic.jpeg" alt="SEVENTEEN" />
+        <h3>SEVENTEEN</h3>
+        <p>Self-producing idols known for choreography & creativity.</p>
+        <div class="card-actions">
+          <button class="open-group btn" data-target="SEVENTEEN">Explore</button>
+          <button class="preview-btn tiny" data-audio="cheers to youth.mp3">▶ Preview</button>
+        </div>
+      </article>
+
+      <article class="group-card" data-group="NewJeans">
+        <img src="New Jeans.jpeg" alt="NewJeans" />
+        <h3>NewJeans</h3>
+        <p>Fresh beats and Y2K vibes for Gen Z fans!</p>
+        <div class="card-actions">
+          <button class="open-group btn" data-target="NewJeans">Explore</button>
+          <button class="preview-btn tiny" data-audio="Bubble gum.mp3">▶ Preview</button>
+        </div>
+      </article>
+
+      <article class="group-card" data-group="TWICE">
+        <img src="Twice photo.jpeg" alt="TWICE" />
+        <h3>TWICE</h3>
+        <p>The Nation's Girl Group — catchy tunes & colorful visuals.</p>
+        <div class="card-actions">
+          <button class="open-group btn" data-target="TWICE">Explore</button>
+          <button class="preview-btn tiny" data-audio="i can't stop me.mp3">▶ Preview</button>
+        </div>
+      </article>
+
+      <article class="group-card" data-group="StrayKids">
+        <img src="Stray kids photo.jpeg" alt="Stray Kids" />
+        <h3>Stray Kids</h3>
+        <p>Revolutionizing K-POP with self-produced hits and fierce energy.</p>
+        <div class="card-actions">
+          <button class="open-group btn" data-target="StrayKids">Explore</button>
+          <button class="preview-btn tiny" data-audio="lalala.mp3">▶ Preview</button>
+        </div>
+      </article>
+    </section>
+
+    <!-- Group Detail Template (hidden initially) -->
+    <section id="groupDetails" class="details" aria-live="polite">
+      <!-- Details inserted by JS when a group is opened -->
+    </section>
+
+    <!-- Utilities area -->
+    <section class="extras">
+      <div class="randomBias">
+        <h3>Random Bias Generator</h3>
+        <p>Can’t choose? Let fate pick a bias for you — group member appears with a fun fact!</p>
+        <button id="randomBiasBtn" class="btn">Give me a Bias</button>
+        <div id="biasResult" class="biasResult" aria-hidden="true"></div>
+      </div>
+
+      <div class="fanbox">
+        <h3>Fan Reaction Box</h3>
+        <textarea id="fanText" placeholder="Leave a fan message or heart!"></textarea>
+        <div class="fan-actions">
+          <button id="postFan" class="btn">Post</button>
+          <button id="clearFan" class="btn ghost">Clear</button>
+        </div>
+        <ul id="fanList" class="fanList"></ul>
+      </div>
+    </section>
+  </main>
+
+  <!-- Floating mini music player -->
+  <div id="miniPlayer" class="mini-player">
+    <button id="miniPlay" class="tiny">▶</button>
+    <span id="miniTitle">No track</span>
+    <button id="muteBtn" class="tiny">🔊</button>
+  </div>
+
+  <!-- Modal for member profile -->
+  <div id="modal" class="modal" aria-hidden="true">
+    <div class="modal-inner">
+      <button class="close" id="modalClose">✕</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="artist-script.js"></script>
+</body>
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Boraverse — K-POP Chatbot</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="chatbot.css">
+</head>
+<body>
+    <!-- Chatbot Toggle Button -->
+    <div class="chatbot-toggle" id="chatbotToggle" aria-label="Open Boraverse chat">
+        <i class="fas fa-comments" aria-hidden="true"></i>
+    </div>
+
+    <!-- Chatbot Container -->
+    <div class="chatbot-container" id="chatbotContainer" role="dialog" aria-modal="true" aria-hidden="true">
+        <!-- Header -->
+        <div class="chatbot-header">
+            <div class="chatbot-title">
+                <h3>Boraverse Assistant</h3>
+                <p>Your K‑POP knowledge hub — ask any group or idol.</p>
+            </div>
+            <button class="close-btn" id="closeBtn" aria-label="Close chat">&times;</button>
+        </div>
+
+        <!-- Chat Messages Area -->
+        <div class="chatbot-messages" id="chatMessages">
+            <div class="message bot-message">
+                <div class="message-content">
+                    <p>Welcome to Boraverse! Ask about any K‑POP group, idol, album, tour or news.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Area -->
+        <div class="chatbot-input">
+            <input 
+                type="text" 
+                id="userInput" 
+                placeholder="Type e.g. 'Tell me about Twice' or 'Where to find EXO discography'..." 
+                autocomplete="off"
+                aria-label="Chat input"
+            >
+            <button id="sendBtn" aria-label="Send"><i class="fas fa-paper-plane"></i></button>
+        </div>
+    </div>
+
+    <script src="chatbot.js"></script>
+</body>
+</html>

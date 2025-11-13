@@ -1,0 +1,130 @@
+/* ===== NEON PURPLE THEME ===== */
+
+:root {
+  --neon-purple: #fdfcfd;
+  --neon-glow: 0 0 15px #ff00aa, 0 0 30px #a100ff, 0 0 45px #a100ff;
+  --dark-bg-start: #000000;
+  --dark-bg-end: #0e001a;
+  --text-light: #f0e6ff;
+  --accent: #ff55ff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(120deg,#0f0226 0%, #2b002b 50%, #0b0b1a 100%);
+  color: var(--text-light);
+  font-family: 'Poppins', sans-serif;
+  min-height: 100vh;
+}
+
+.site-header {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(90deg, #1a001f, #150b1b);
+  box-shadow: 0 0 25px #a100ff80;
+}
+
+.site-header h1 {
+  color: var(--neon-purple);
+  font-size: 2.5rem;
+  text-shadow: var(--neon-glow);
+  letter-spacing: 1px;
+}
+
+.nav {
+  margin-top: 15px;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.1rem;
+  transition: color 0.3s, text-shadow 0.3s;
+}
+
+.nav a:hover,
+.nav a.active {
+  color: var(--accent);
+  text-shadow: var(--neon-glow);
+}
+
+.news-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.section-title {
+  text-align: center;
+  color: var(--neon-purple);
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  text-shadow: var(--neon-glow);
+}
+
+.news-list {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.news-item {
+  background: rgba(30, 0, 60, 0.6);
+  border: 1px solid var(--neon-purple);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 15px #a100ff40;
+  transition: all 0.3s ease;
+}
+
+.news-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 0 25px #a100ff80;
+}
+
+.news-item h3 {
+  color: var(--accent);
+  margin-bottom: 10px;
+}
+
+.news-item .artist {
+  color: var(--neon-purple);
+  font-weight: bold;
+  font-size: 1rem;
+  margin-bottom: 5px;
+}
+
+.news-item p {
+  margin-bottom: 10px;
+  color: #ddd;
+}
+
+.news-item .date {
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
+.news-item a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.news-item a:hover {
+  text-decoration: underline;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+  color: #ccc;
+  border-top: 1px solid var(--neon-purple);
+  background: #070007;
+}

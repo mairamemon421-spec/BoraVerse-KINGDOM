@@ -1,0 +1,15 @@
+{
+  "fanArt": [
+    { "title": "Butter Era BTS", "artist": "ArmyMoon", "image": "images/fanart_butter.jpg" },
+    { "title": "Pink Venom Vibes", "artist": "BlinkStar", "image": "images/fanart_blackpink.jpg" },
+    { "title": "Hype Boy Energy", "artist": "MinjiFan", "image": "images/fanart_newjeans.jpg" },
+    { "title": "Love Shot Visuals", "artist": "EXOHeart", "image": "images/fanart_exo.jpg" }
+  ],
+  "trivia": [
+    { "question": "Which BTS song was the first to reach 1 billion views on YouTube?", "options": ["Dynamite", "Boy With Luv", "Fake Love", "Butter"], "answer": "Boy With Luv" },
+    { "question": "Which BLACKPINK member is from New Zealand?", "options": ["Lisa", "Jennie", "Jisoo", "Rosé"], "answer": "Rosé" },
+    { "question": "Which group released the hit song 'Love Shot'?", "options": ["EXO", "SEVENTEEN", "Stray Kids", "BTS"], "answer": "EXO" },
+    { "question": "Which NewJeans song became viral for its choreography?", "options": ["Hype Boy", "Ditto", "Super Shy", "OMG"], "answer": "Super Shy" },
+    { "question": "Which TWICE song includes the line 'You make me feel special'?", "options": ["Fancy", "Feel Special", "Yes or Yes", "Talk That Talk"], "answer": "Feel Special" }
+  ]
+}
